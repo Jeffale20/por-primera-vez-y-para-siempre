@@ -1,0 +1,294 @@
+/* =========================
+   MENÚ SUPERIOR
+========================= */
+
+.encabezado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  background: rgba(255, 250, 247, 0.92);
+  border-bottom: var(--borde-suave);
+  backdrop-filter: blur(12px);
+}
+
+.navegacion {
+  min-height: 76px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  color: var(--color-vino);
+  font-family: var(--fuente-titulos);
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--color-rosa-oscuro);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.menu a {
+  color: var(--color-texto-suave);
+  font-size: 0.94rem;
+  transition: var(--transicion);
+}
+
+.menu a:hover {
+  color: var(--color-rosa-oscuro);
+}
+
+.boton-menu {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--color-vino);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.portada {
+  min-height: 100vh;
+  padding: 145px 0 85px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.etiqueta {
+  color: var(--color-rosa-oscuro);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.portada h1 {
+  color: var(--color-vino);
+  font-family: var(--fuente-titulos);
+  font-size: clamp(3.3rem, 6vw, 6.3rem);
+  font-weight: normal;
+  line-height: 0.96;
+  margin-bottom: 25px;
+}
+
+.subtitulo {
+  max-width: 600px;
+  color: var(--color-texto-suave);
+  font-family: var(--fuente-romantica);
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.firma {
+  color: var(--color-rosa-oscuro);
+  font-family: var(--fuente-romantica);
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 35px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.grupo-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 25px;
+  border-radius: var(--radio-boton);
+
+  font-size: 0.9rem;
+  font-weight: bold;
+
+  transition: var(--transicion);
+}
+
+.boton-principal {
+  background-color: var(--color-vino);
+  box-shadow: 0 12px 25px rgba(111, 29, 53, 0.22);
+  color: var(--color-blanco);
+}
+
+.boton-principal:hover {
+  background-color: var(--color-vino-oscuro);
+  transform: translateY(-4px);
+}
+
+.boton-secundario {
+  border: 1px solid var(--color-rosa-oscuro);
+  color: var(--color-rosa-oscuro);
+}
+
+.boton-secundario:hover {
+  background-color: var(--color-rosa-claro);
+  transform: translateY(-4px);
+}
+
+/* =========================
+   LIBRO DECORATIVO
+========================= */
+
+.libro-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.libro-portada {
+  width: min(390px, 100%);
+  aspect-ratio: 0.68;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 42px 35px;
+
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent),
+    linear-gradient(145deg, #962f50, var(--color-vino-oscuro));
+
+  border-radius: 8px 22px 22px 8px;
+
+  box-shadow:
+    -12px 14px 0 #42101f,
+    18px 24px 45px rgba(65, 11, 29, 0.28);
+
+  color: var(--color-blanco);
+  transform: rotate(4deg);
+  transition: var(--transicion);
+}
+
+.libro-portada:hover {
+  transform: rotate(0deg) translateY(-10px);
+}
+
+.libro-portada::before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  right: -120px;
+
+  width: 280px;
+  height: 280px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+}
+
+.libro-portada::after {
+  content: "♥";
+  position: absolute;
+  right: 25px;
+  bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.11);
+  font-size: 7rem;
+}
+
+.libro-etiqueta {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 22px;
+
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  opacity: 0.85;
+  text-transform: uppercase;
+}
+
+.libro-portada h2 {
+  position: relative;
+  z-index: 1;
+
+  font-family: var(--fuente-titulos);
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-weight: normal;
+  line-height: 1;
+}
+
+.libro-frase {
+  position: relative;
+  z-index: 1;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  padding-top: 20px;
+
+  font-family: var(--fuente-romantica);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* =========================
+   FRASE FINAL
+========================= */
+
+.frase-inicio {
+  padding: 80px 0;
+
+  background: linear-gradient(
+    180deg,
+    var(--color-rosa-claro),
+    var(--color-crema)
+  );
+
+  text-align: center;
+}
+
+.frase-inicio p {
+  max-width: 760px;
+  margin: 0 auto;
+
+  color: var(--color-vino);
+  font-family: var(--fuente-romantica);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+.pie-pagina {
+  padding: 25px 15px;
+
+  background-color: var(--color-vino-oscuro);
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 0.85rem;
+  text-align: center;
+}

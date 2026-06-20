@@ -1,0 +1,391 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Archivo 00: Una nota en el mapa del tiempo."
+  >
+
+  <title>Archivo 00 | Una nota en el mapa del tiempo</title>
+
+  <!-- ESTILOS GENERALES DEL LIBRO -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/lectura.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- ESTILO EXCLUSIVO DEL ARCHIVO 00 -->
+  <link rel="stylesheet" href="../css/archivo-tiempo.css">
+</head>
+
+<body class="archivo-tiempo">
+
+  <!-- CORAZONES DE FONDO -->
+  <div class="corazones-fondo" aria-hidden="true">
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+  </div>
+
+  <!-- MENÚ SUPERIOR -->
+  <header class="encabezado">
+    <nav class="navegacion contenedor">
+
+      <a href="../index.html" class="logo">
+        Por primera vez <span>y para siempre</span>
+      </a>
+
+      <button
+        class="boton-menu"
+        id="botonMenu"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <ul class="menu" id="menu">
+        <li>
+          <a href="../index.html">Inicio</a>
+        </li>
+
+        <li>
+          <a href="../indice.html">Índice</a>
+        </li>
+
+        <li>
+          <a href="prologo.html">Prólogo</a>
+        </li>
+
+        <li>
+          <a href="../acerca-del-libro.html">Sobre este libro</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PANTALLA DE ACTIVACIÓN -->
+    <section class="pantalla-archivo">
+
+      <div class="consola-archivo">
+
+        <div class="estado-archivo">
+          <span class="luz-estado"></span>
+          Archivo activado antes de la fecha prevista
+        </div>
+
+        <p class="codigo-archivo">
+          Archivo 00 · Registro fuera del tiempo
+        </p>
+
+        <h1 class="titulo-archivo">
+          Una nota<br>
+          en el mapa<br>
+          del tiempo
+        </h1>
+
+        <p class="descripcion-archivo">
+          Este archivo no debía abrirse todavía.
+          Pero hoy el tiempo se adelantó a mis manos.
+        </p>
+
+        <div class="datos-archivo">
+
+          <div class="dato">
+            <span>Para</span>
+            <strong>Mi bota</strong>
+          </div>
+
+          <div class="dato">
+            <span>De</span>
+            <strong>Jefferson</strong>
+          </div>
+
+          <div class="dato">
+            <span>Fecha de apertura</span>
+            <strong id="fechaHoy">Cargando fecha...</strong>
+          </div>
+
+        </div>
+
+        <button
+          type="button"
+          class="boton boton-archivo"
+          id="abrirNota"
+        >
+          Abrir la nota que el tiempo adelantó ♥
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- CARTA: SOLO APARECE AL HACER CLIC -->
+    <section
+      class="nota-oculta"
+      id="notaOculta"
+      aria-hidden="true"
+    >
+
+      <div class="contenedor-nota">
+
+        <header class="cabecera-nota">
+          <p>Para leer solo en caso de emergencia</p>
+
+          <h1>
+            Hola, mi amor.
+          </h1>
+        </header>
+
+        <article class="carta-tiempo">
+
+          <p>
+            Si estás leyendo esta página, significa que el destino alteró los
+            planes o que el tiempo se adelantó a mis manos. Al avanzar un poco
+            más, te habrás dado cuenta de que el libro está incompleto; tal vez
+            te quedaste en el segundo capítulo, tal vez hay un par más, no lo sé.
+          </p>
+
+          <p>
+            He intentado escribir esto con el alma desnuda, cuidando cada detalle,
+            pero si tus ojos están hoy sobre estas líneas, es porque esta hoja
+            oculta se activó antes de tiempo.
+          </p>
+
+          <p>
+            Debes saber que ideé este proyecto en dos formatos: una versión física,
+            impresa, que sueño con entregarte terminada en tus manos para que puedas
+            abrazarla, y esta versión virtual.
+          </p>
+
+          <p>
+            Si estás leyendo esto en una pantalla, es porque la versión física aún
+            no ha podido nacer y el archivo digital se liberó antes de lo planeado.
+            Diseñé este rincón secreto pensando en el futuro, guardándolo como un
+            archivo que solo debía abrirse bajo ciertas condiciones.
+          </p>
+
+          <p>
+            Hoy, mientras lees esto, me pregunto cuál de todas las realidades fue la
+            que nos trajo a esta página.
+          </p>
+
+        </article>
+
+        <!-- LAS TRES PUERTAS -->
+        <section class="seccion-puertas">
+
+          <h2 class="titulo-puertas">
+            Tres puertas en el mapa del tiempo
+          </h2>
+
+          <p class="subtitulo-puertas">
+            No sé cuál de estas realidades abrió este archivo.
+            Pero todas guardan el mismo mensaje: cada palabra nació por ti.
+          </p>
+
+          <div class="puertas-tiempo">
+
+            <button
+              type="button"
+              class="puerta-tiempo activa"
+              data-puerta="uno"
+              aria-expanded="true"
+            >
+              <span class="numero-puerta">PUERTA 01</span>
+
+              <div>
+                <h3>Nuestra impaciencia</h3>
+
+                <p>
+                  La realidad que se activó hoy.
+                </p>
+              </div>
+
+              <span class="estado-puerta">
+                Abierta hoy
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="puerta-tiempo"
+              data-puerta="dos"
+              aria-expanded="false"
+            >
+              <span class="numero-puerta">PUERTA 02</span>
+
+              <div>
+                <h3>El destino cumplido</h3>
+
+                <p>
+                  Una puerta sellada para el futuro.
+                </p>
+              </div>
+
+              <span class="estado-puerta">
+                Guardada en el tiempo
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="puerta-tiempo"
+              data-puerta="tres"
+              aria-expanded="false"
+            >
+              <span class="numero-puerta">PUERTA 03</span>
+
+              <div>
+                <h3>La herida en el camino</h3>
+
+                <p>
+                  Una posibilidad que no quiero imaginar.
+                </p>
+              </div>
+
+              <span class="estado-puerta">
+                Fuera del tiempo
+              </span>
+            </button>
+
+          </div>
+
+          <!-- CONTENIDO PUERTA 01 -->
+          <article
+            class="contenido-puerta activo"
+            id="contenido-uno"
+          >
+            <h3>La primera realidad: nuestra impaciencia</h3>
+
+            <p>
+              Puede ser que simplemente no me aguanté las ganas de entregarte
+              esta sorpresa. Tal vez hoy estamos cumpliendo un mes más juntos,
+              vi este documento guardado y mi corazón no pudo esperar a que
+              terminara de imprimirse el libro real.
+            </p>
+
+            <p>
+              Mi amor por ti no sabe de esperas ni de calendarios. Si es así,
+              estás ante una versión digital anticipada, un adelanto de todo lo
+              que todavía te quiero decir.
+            </p>
+
+            <p>
+              Hoy no se activó por accidente. Se activó porque cumplimos otro
+              mes, porque no pude seguir guardando este pedazo de ti en una
+              carpeta de mi computadora.
+            </p>
+          </article>
+
+          <!-- CONTENIDO PUERTA 02 -->
+          <article
+            class="contenido-puerta"
+            id="contenido-dos"
+            hidden
+          >
+            <h3>La segunda realidad: el destino cumplido</h3>
+
+            <p>
+              Quizás dejé este fragmento de texto configurado y programado con
+              una fecha de liberación muy lejana en el futuro. Algo parecido a
+              aquella página web que desbloqueó un ítem justo cuando el reloj
+              marcó la fecha y la hora exacta.
+            </p>
+
+            <p>
+              Tal vez aquí pasó lo mismo: el tiempo voló, los años pasaron,
+              dejamos atrás la universidad, nos casamos y hoy estamos a punto de
+              recibir a nuestro primer bebé en brazos.
+            </p>
+
+            <p>
+              Si es por eso, encontrar este archivo digital perdido y leerlo
+              juntos en nuestra casa será el recordatorio más hermoso de que
+              todo lo que un día soñamos se volvió real.
+            </p>
+          </article>
+
+          <!-- CONTENIDO PUERTA 03 -->
+          <article
+            class="contenido-puerta"
+            id="contenido-tres"
+            hidden
+          >
+            <h3>La tercera realidad: la herida en el camino</h3>
+
+            <p>
+              Esta es la posibilidad que más me cuesta escribir y la que menos
+              me gusta imaginar. Puede ser que la vida se haya puesto difícil,
+              que me haya pasado algo inesperado, o que, por las razones que
+              sean, lo nuestro haya terminado antes de que pudiera entregarte
+              el libro impreso.
+            </p>
+
+            <p>
+              Si el destino nos separó y nos convertimos en un hermoso recuerdo,
+              no quería irme de tu vida sin dejarte la última huella de mi amor
+              en este espacio virtual, aunque esté incompleta.
+            </p>
+
+            <p>
+              Quería que supieras que, hasta el último segundo, intenté
+              inmortalizar lo que fuimos en letras.
+            </p>
+          </article>
+
+        </section>
+
+        <!-- MENSAJE FINAL -->
+        <section class="mensaje-aniversario">
+          <p>
+            No sé cuál de estas tres puertas fue la que se abrió para que hoy
+            estés aquí. Pero sin importar la razón, la distancia o el año en el
+            que te encuentres, el mensaje será siempre el mismo: fuiste, eres y
+            serás mi única certeza en un mundo donde todo lo demás se desecha.
+          </p>
+
+          <br>
+
+          <p>
+            Si fue por la primera opción, sonríe, mi amor:
+            todavía nos quedan muchos capítulos por escribir juntos.
+          </p>
+        </section>
+
+        <nav class="navegacion-archivo">
+          <a href="capitulo-02.html" class="boton boton-secundario">
+            ← Volver a Frecuencia cero
+          </a>
+        </nav>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="pie-pagina">
+    <p>
+      © 2026 — Escrito por Jefferson para Mi bota, con todo mi amor.
+    </p>
+  </footer>
+
+  <!-- MENÚ GENERAL -->
+  <script src="../js/main.js"></script>
+
+  <!-- INTERACCIONES DEL ARCHIVO 00 -->
+  <script src="../js/archivo-tiempo.js"></script>
+
+</body>
+</html>

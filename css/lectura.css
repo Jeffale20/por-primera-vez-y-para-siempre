@@ -1,0 +1,150 @@
+/* =========================================
+   PÁGINAS DE LECTURA:
+   PRÓLOGO Y CAPÍTULOS
+========================================= */
+
+.pagina-lectura {
+  min-height: 100vh;
+  padding: 150px 0 90px;
+}
+
+.contenedor-lectura {
+  width: min(var(--ancho-lectura), 90%);
+  margin: 0 auto;
+}
+
+.encabezado-capitulo {
+  max-width: 650px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.etiqueta-capitulo {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  color: var(--color-rosa-oscuro);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.titulo-capitulo {
+  margin-bottom: 18px;
+
+  color: var(--color-vino);
+  font-family: var(--fuente-titulos);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: normal;
+  line-height: 1;
+}
+
+.resumen-capitulo {
+  color: var(--color-texto-suave);
+  font-family: var(--fuente-romantica);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* Caja donde se lee el texto */
+
+.texto-libro {
+  padding: clamp(30px, 6vw, 68px);
+
+  background-color: var(--color-blanco);
+  border: var(--borde-suave);
+  border-radius: var(--radio-grande);
+  box-shadow: var(--sombra-suave);
+
+  color: var(--color-texto);
+  font-family: var(--fuente-romantica);
+  font-size: clamp(1rem, 2vw, 1.14rem);
+  line-height: 1.95;
+}
+
+.texto-libro p {
+  margin-bottom: 26px;
+}
+
+.texto-libro p:last-child {
+  margin-bottom: 0;
+}
+
+/* Letra grande al inicio del primer párrafo */
+
+.texto-libro p:first-child::first-letter {
+  float: left;
+  padding-top: 12px;
+  padding-right: 12px;
+
+  color: var(--color-rosa-oscuro);
+  font-family: var(--fuente-titulos);
+  font-size: 4.8rem;
+  line-height: 0.65;
+}
+
+/* Frases importantes */
+
+.frase-destacada {
+  margin: 38px 0;
+  padding: 22px 25px;
+
+  border-left: 4px solid var(--color-rosa-oscuro);
+  border-radius: 0 14px 14px 0;
+  background-color: var(--color-rosa-claro);
+
+  color: var(--color-vino);
+  font-family: var(--fuente-romantica);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Firma dentro del texto */
+
+.firma-capitulo {
+  margin-top: 40px;
+
+  color: var(--color-rosa-oscuro);
+  font-family: var(--fuente-romantica);
+  font-size: 1.15rem;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Botones para pasar entre páginas */
+
+.navegacion-lectura {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 38px;
+}
+
+/* Celular */
+
+@media (max-width: 650px) {
+  .pagina-lectura {
+    padding: 115px 0 70px;
+  }
+
+  .encabezado-capitulo {
+    margin-bottom: 35px;
+  }
+
+  .navegacion-lectura {
+    flex-direction: column;
+  }
+
+  .navegacion-lectura .boton {
+    width: 100%;
+  }
+
+  .texto-libro p:first-child::first-letter {
+    font-size: 4.1rem;
+  }
+}

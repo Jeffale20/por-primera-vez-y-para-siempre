@@ -1,0 +1,30 @@
+:root {
+  /* Colores principales */
+  --color-vino: #6f1d35;
+  --color-vino-oscuro: #4d1022;
+  --color-rosa-oscuro: #a33e5e;
+  --color-rosa: #e9a9bc;
+  --color-rosa-claro: #fff0f4;
+  --color-crema: #fffaf7;
+  --color-blanco: #ffffff;
+  --color-texto: #39282e;
+  --color-texto-suave: #725a61;
+
+  /* Tipografías */
+  --fuente-titulos: Georgia, "Times New Roman", serif;
+  --fuente-texto: "Segoe UI", Arial, sans-serif;
+  --fuente-romantica: Georgia, "Times New Roman", serif;
+
+  /* Tamaños generales */
+  --ancho-contenido: 1150px;
+  --ancho-lectura: 800px;
+
+  /* Bordes y sombras */
+  --borde-suave: 1px solid rgba(163, 62, 94, 0.15);
+  --sombra-suave: 0 18px 45px rgba(90, 22, 47, 0.14);
+  --radio-grande: 22px;
+  --radio-boton: 999px;
+
+  /* Transiciones */
+  --transicion: 0.3s ease;
+}

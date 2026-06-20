@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-crema);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+.contenedor {
+  width: min(var(--ancho-contenido), 90%);
+  margin: 0 auto;
+}
+
+/* Corazones decorativos del fondo */
+
+.corazones-fondo {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.corazones-fondo span {
+  position: absolute;
+  color: rgba(163, 62, 94, 0.10);
+  font-size: 2rem;
+  animation: flotar 10s ease-in-out infinite;
+}
+
+.corazones-fondo span:nth-child(1) {
+  top: 10%;
+  left: 7%;
+  font-size: 2rem;
+}
+
+.corazones-fondo span:nth-child(2) {
+  top: 18%;
+  right: 9%;
+  font-size: 4rem;
+  animation-delay: 1s;
+}
+
+.corazones-fondo span:nth-child(3) {
+  bottom: 15%;
+  left: 10%;
+  font-size: 3rem;
+  animation-delay: 3s;
+}
+
+.corazones-fondo span:nth-child(4) {
+  bottom: 20%;
+  right: 8%;
+  font-size: 2.5rem;
+  animation-delay: 2s;
+}
+
+.corazones-fondo span:nth-child(5) {
+  top: 50%;
+  left: 3%;
+  font-size: 1.5rem;
+  animation-delay: 4s;
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-22px) rotate(10deg);
+  }
+}
